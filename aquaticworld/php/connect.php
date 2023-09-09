@@ -14,43 +14,43 @@ if (!$conn) {
 
 // Get form data
 $name = $_POST['name'];
-$mail = $_POST['mail'];
-$telno = $_POST['telno'];
+$mail = $_POST['email'];
+$telno = $_POST['pno'];
 $address = $_POST['address'];
-$tellmessage = $_POST['tellmessage'];
+$tellmessage = $_POST['message'];
 $product = $_POST['product'];
 
 // Insert data into table
 
 if($product=="Ornamental Fish")
             {
-                $sql = "INSERT INTO seller_rform_all_p (name, mail, telno, address, tellmessage,product) VALUES ('$name' , '$mail' , '$telno' , '$address', '$tellmessage','$product')";
+                $sql = "INSERT INTO reg_of (name, mail, telno, address, tellmessage,product) VALUES ('$name' , '$mail' , '$telno' , '$address', '$tellmessage','$product')";
 
             }
 else if ($product=="Aquatic Plants") 
             {
-                $sql = "INSERT INTO seller_rform_o_f (name, mail, telno,address, tellmessage,product) VALUES ('$name' , '$mail' , '$telno' , '$address', '$tellmessage','$product')";
+                $sql = "INSERT INTO reg_ap (name, mail, telno,address, tellmessage,product) VALUES ('$name' , '$mail' , '$telno' , '$address', '$tellmessage','$product')";
 
             }
 else if ($product=="Fish Foods") 
             {
-                $sql = "INSERT INTO seller_rform_a_p (name, mail, telno,address, tellmessage,product) VALUES ('$name' , '$mail' , '$telno' , '$address', '$tellmessage','$product')";
+                $sql = "INSERT INTO reg_ff (name, mail, telno,address, tellmessage,product) VALUES ('$name' , '$mail' , '$telno' , '$address', '$tellmessage','$product')";
 
             }
 else if ($product=="Fish Medicine") 
             {
-                $sql = "INSERT INTO seller_rform_o_f_t (name, mail, telno,address, tellmessage,product) VALUES ('$name' , '$mail' , '$telno' , '$address', '$tellmessage','$product')";
+                $sql = "INSERT INTO reg_fm (name, mail, telno,address, tellmessage,product) VALUES ('$name' , '$mail' , '$telno' , '$address', '$tellmessage','$product')";
 
             }
 else if ($product=="Fish Tanks") 
             {
-                $sql = "INSERT INTO seller_rform_o_f_f (name, mail, telno,address, tellmessage,product) VALUES ('$name' , '$mail' , '$telno' , '$address', '$tellmessage','$product')";
+                $sql = "INSERT INTO reg_ft (name, mail, telno,address, tellmessage,product) VALUES ('$name' , '$mail' , '$telno' , '$address', '$tellmessage','$product')";
 
             }
 
 else if ($product=="Other")
 			{
-				$sql = "INSERT INTO seller_rform_o_f_m (name, mail, telno,address, tellmessage,product) VALUES ('$name' , '$mail' , '$telno' , '$address', '$tellmessage','$product')";
+				$sql = "INSERT INTO reg_other (name, mail, telno,address, tellmessage,product) VALUES ('$name' , '$mail' , '$telno' , '$address', '$tellmessage','$product')";
 
 			}
 
